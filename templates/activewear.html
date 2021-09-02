@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Active Wear</title>
+  <script src="https://kit.fontawesome.com/f8ca3d18f3.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="static/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Hahmlet:wght@100&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body class="body">
+ <!-- Nav Bar -->
+<section>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light"  >
+              <img src="static/logo.png" width="200px" height="100px">
+              <a class="navbar-brand" href="/"></a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+
+                    <li class="nav-item active">
+                      <a class="nav-link" href="/"><b>Home</b></a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="/activewear" id="navbardrop"><b>Active Wear</b></a>
+                      <div class="dropdown-menu">
+                        <ul class="dropdownlinks">
+                            <li><a href="#men"> Men</a></li>
+                            <li><a href="#women">Women</a></li>
+
+                        </ul>
+                      </div>
+                    </li>
+
+
+
+                    <li class="nav-item">
+                      <a class="nav-link" href="/shoes"><b>Shoes</b></a>
+                    </li>
+
+                    <li>
+                      <a class="nav-link" href="/accessories"><b>Accessories</b></a>
+                    </li>
+
+                     <li>
+                      <a class="nav-link" href="/tournaments"><b>Tournaments</b></a>
+                    </li>
+
+                    <li>
+                        <div id="account" class="nav-item dropdown" >
+                            <a class="nav-link dropdown-toggle" href="/account" id="navbardrop1"><b>Account</b></a>
+                                <div class="dropdown-menu">
+                                    <ul class="dropdownlinks">
+                                        <li><a href="/signin">Sign In</a></li>
+                                        <li> <a href="/signup">Sign Up</a></li>
+                                    </ul>
+                                </div>
+                        </div>
+                    </li>
+                </ul>
+              </div>
+
+    </nav>
+
+</section>
+<!-- General Section-->
+ <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+      </ol>
+      <div class="carousel-inner" role="listbox">
+        <div class="carousel-item active">
+          <img class="d-block w-100 img-fluid" src="static/activewear2.png" style="width: 900px; height: 400px;">
+        </div>
+
+        <div class="carousel-item">
+          <img class="d-block w-100 img-fluid" src="static/activewear3.png" style="width: 900px; height: 500px;">
+        </div>
+
+  </div>
+      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+</div>
+ <br><br>
+
+ <section class="container">
+     <div class="row">
+         <div class="card col-md-3">
+              <div class="card-body">
+                <p class="card-heading">Track Jacket</p>
+              </div>
+              <img src="static/trackjacket.jpg" alt="Card image" style="width: 250px; height: 300px;"><br>
+              <div class="card-body1">
+                <p class="card-text">This jacket  is the perfect midground between accessibility and luxury</p>
+              </div>
+
+             <button class="btn btn-info">Add To Cart</button>
+             <br>
+
+         </div>
+         <div class="card col-md-3">
+              <div class="card-body">
+                <p class="card-heading">Hoodie</p>
+              </div>
+              <img src="static/hoodie.jpg" alt="Card image" style="width: 250px; height: 300px;"><br>
+              <div class="card-body1">
+                <p class="card-text">This hoodie gives you the full coverage for a full workout.</p>
+              </div>
+
+             <button class="btn btn-info">Add To Cart</button>
+             <br>
+
+         </div>
+         <div class="card col-md-3">
+              <div class="card-body">
+                <p class="card-heading">Visor</p>
+              </div>
+              <img src="static/cap.jpg" alt="Card image" style="width: 250px; height: 300px;"><br>
+              <div class="card-body1">
+                <p class="card-text">This visor is made of fabric sweatband  that folds down for easy embellishment.</p>
+              </div>
+
+             <button class="btn btn-info">Add To Cart</button>
+             <br>
+
+         </div>
+         <div class="card col-md-3">
+              <div class="card-body">
+                <p class="card-heading">Running Socks</p>
+              </div>
+              <img src="static/sock.jpg" alt="Card image" style="width: 250px; height: 300px;"><br>
+              <div class="card-body1">
+                <p class="card-text">An ultra-lightweight sock with cushion underfoot offers a comfortable, airy fit with zero bulk.</p>
+              </div>
+
+             <button class="btn btn-info">Add To Cart</button>
+             <br>
+
+         </div>
+     </div>
+
+ </section><br><br>
+
+
+
+<!-- Womens Section-->
+ <h3 class="gender" id="women">Women's Section</h3>
+ <img src="static/womentemplate.jpg" alt="" class="d-block w-100 img-fluid" style="width: 700px; height: 300px;">
+<!--Carousel Wrapper-->
+<div id="multi-item-example" class="carousel slide carousel-multi-item" data-ride="carousel">
+
+  <!--Controls-->
+  <div class="controls-top">
+    <a class="btn-floating" href="#multi-item-example" data-slide="prev"><i class="fas fa-chevron-left"></i></a>
+    <a class="btn-floating" href="#multi-item-example" data-slide="next"><i
+        class="fas fa-chevron-right"></i></a>
+  </div>
+  <!--/.Controls-->
+
+  <!--Indicators-->
+  <ol class="carousel-indicators" >
+    <li data-target="#multi-item-example" data-slide-to="0" class="active"></li>
+    <li data-target="#multi-item-example" data-slide-to="1"></li>
+
+  </ol>
+  <!--/.Indicators-->
+
+  <!--Slides-->
+  <div class="carousel-inner" role="listbox">
+
+    <!--First slide-->
+    <div class="carousel-item active">
+
+      <div class="col-md-3" style="float:left">
+       <div class="card mb-2">
+        <p class="card-heading">Tank Top</p>
+          <img class="card-img-top"
+            src="static/womentanktop.jpg" alt="Card image cap" style="width: 250px; height: 300px;">
+          <div class="card-body">
+            
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+              card's content.</p>
+            <a class="btn btn-primary">Add To Cart</a><br>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3" style="float:left">
+        <div class="card mb-2">
+          <p class="card-heading">Long Sleeved Shirt</p>
+          <img class="card-img-top"
+            src="static/longsleevedshirt.jpg" alt="Card image cap" style="width: 250px; height: 300px;">
+          <div class="card-body">
+            
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+              card's content.</p>
+            <a class="btn btn-primary">Add To Cart</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3" style="float:left">
+        <div class="card mb-2">
+          <p class="card-heading">Sweat Shorts</p>
+          <img class="card-img-top"
+            src="static/sweatshorts.jpg" alt="Card image cap" style="width: 250px; height: 300px;">
+          <div class="card-body">
+            
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+              card's content.</p>
+            <a class="btn btn-primary">Add To Cart</a>
+          </div>
+        </div>
+      </div>
+
+       <div class="col-md-3" style="float:left">
+       <div class="card mb-2">
+        <p class="card-heading">Sweat Pants</p>
+          <img class="card-img-top"
+            src="static/sweatpants.jpg" alt="Card image cap" style="width: 250px; height: 300px;">
+          <div class="card-body">            
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+              card's content.</p>
+            <a class="btn btn-primary">Add To Cart</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <!--/.First slide-->
+
+    <!--Second slide-->
+    <div class="carousel-item">
+
+      <div class="col-md-3" style="float:left">
+        <div class="card mb-2">
+          <p class="card-heading">Racker Back</p>
+          <img class="card-img-top img-fluid"
+            src="static/rackerback.jpg" alt="Card image cap" style="width: 250px; height: 300px;">
+          <div class="card-body">
+            
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+              card's content.</p>
+            <a class="btn btn-primary">Add To Cart</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3" style="float:left">
+        <div class="card mb-2">
+          <p class="card-heading">Sports Bra</p>
+          <img class="card-img-top"
+            src="static/sportsbras.jpg" style="width: 250px; height: 300px;">
+          <div class="card-body">
+            
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+              card's content.</p>
+            <a class="btn btn-primary">Add To Cart</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3" style="float:left">
+        <div class="card mb-2">
+          <p class="card-heading">Leggings</p>
+          <img class="card-img-top"
+            src="static/leggings.jpg" style="width: 250px; height: 300px;">
+          <div class="card-body">
+            
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+              card's content.</p>
+            <a class="btn btn-primary">Add To Cart</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3" style="float:left">
+        <div class="card mb-2">
+          <p class="card-heading">Bermuda Shorts</p>
+          <img class="card-img-top"
+            src="static/bermudashorts.jpg" alt="Card image cap" style="width: 250px; height: 300px;">
+          <div class="card-body">
+            
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+              card's content.</p>
+            <a class="btn btn-primary">Add To Cart</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <!--/.Second slide-->
+
+
+
+  </div>
+  <!--/.Slides-->
+
+</div>
+
+<!-- Mens Section-->
+  <h3 class="gender" id="men">Men's Section</h3>
+ <img src="static/mentemplate.jpg" alt="" class="d-block w-100 img-fluid" style="width: 700px; height: 300px;">
+ <!--Carousel Wrapper-->
+<div id="multi-item-example" class="carousel slide carousel-multi-item" data-ride="carousel">
+
+  <!--Controls-->
+  <div class="controls-top">
+    <a class="btn-floating" href="#multi-item-example" data-slide="prev"><i class="fas fa-chevron-left"></i></a>
+    <a class="btn-floating" href="#multi-item-example" data-slide="next"><i
+        class="fas fa-chevron-right"></i></a>
+  </div>
+  <!--/.Controls-->
+
+  <!--Indicators-->
+  <ol class="carousel-indicators" >
+    <li data-target="#multi-item-example" data-slide-to="0" class="active"></li>
+    <li data-target="#multi-item-example" data-slide-to="1"></li>
+
+  </ol>
+  <!--/.Indicators-->
+
+  <!--Slides-->
+  <div class="carousel-inner" role="listbox">
+
+    <!--First slide-->
+    <div class="carousel-item active">
+
+      <div class="col-md-3" style="float:left">
+       <div class="card mb-2">
+        <p class="card-heading">Compression T-shirt</p>
+          <img class="card-img-top"
+            src="static/compressiontshirt.jpg" alt="Card image cap" style="width: 250px; height: 300px;">
+          <div class="card-body">
+
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+              card's content.</p>
+            <a class="btn btn-primary">Add To Cart</a><br>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3" style="float:left">
+        <div class="card mb-2">
+          <p class="card-heading">Tank Top</p>
+          <img class="card-img-top"
+            src="static/tanktop.jpg" alt="Card image cap" style="width: 250px; height: 300px;">
+          <div class="card-body">
+
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+              card's content.</p>
+            <a class="btn btn-primary">Add To Cart</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3" style="float:left">
+        <div class="card mb-2">
+          <p class="card-heading">Tight</p>
+          <img class="card-img-top"
+            src="static/tights.jpg" alt="Card image cap" style="width: 250px; height: 300px;">
+          <div class="card-body">
+
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+              card's content.</p>
+            <a class="btn btn-primary">Add To Cart</a>
+          </div>
+        </div>
+      </div>
+
+       <div class="col-md-3" style="float:left">
+       <div class="card mb-2">
+        <p class="card-heading">Compression Short</p>
+          <img class="card-img-top"
+            src="static/compressionshort.jpg" alt="Card image cap" style="width: 250px; height: 300px;">
+          <div class="card-body">
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+              card's content.</p>
+            <a class="btn btn-primary">Add To Cart</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <!--/.First slide-->
+
+    <!--Second slide-->
+    <div class="carousel-item">
+
+      <div class="col-md-3" style="float:left">
+        <div class="card mb-2">
+          <p class="card-heading">Trainer Short</p>
+          <img class="card-img-top img-fluid"
+            src="static/trainershorts.jpg" alt="Card image cap" style="width: 250px; height: 300px;">
+          <div class="card-body">
+
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+              card's content.</p>
+            <a class="btn btn-primary">Add To Cart</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3" style="float:left">
+        <div class="card mb-2">
+          <p class="card-heading">Capri Pant</p>
+          <img class="card-img-top"
+            src="static/capripants.jpg" style="width: 250px; height: 300px;">
+          <div class="card-body">
+
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+              card's content.</p>
+            <a class="btn btn-primary">Add To Cart</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3" style="float:left">
+        <div class="card mb-2">
+          <p class="card-heading">Singlet</p>
+          <img class="card-img-top"
+            src="static/singlet.jpg" style="width: 250px; height: 300px;">
+          <div class="card-body">
+
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+              card's content.</p>
+            <a class="btn btn-primary">Add To Cart</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3" style="float:left">
+        <div class="card mb-2">
+          <p class="card-heading">Short Sleeve Shirt</p>
+          <img class="card-img-top"
+            src="static/shortsleeve.jpg" alt="Card image cap" style="width: 250px; height: 300px;">
+          <div class="card-body">
+
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+              card's content.</p>
+            <a class="btn btn-primary">Add To Cart</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <!--/.Second slide-->
+
+
+
+  </div>
+  <!--/.Slides-->
+
+</div>
+
+
+ <!-- Footer Section  -->
+<section>
+    <footer>
+        <div class="row text-center">
+
+          <div class="col-md-3">
+			      <h4><b>Our Social Media Handles:</b></h4>
+            <a href=""><i class='fab fa-twitter' style='font-size:55px'></i></a>
+            <a href=""><i class='fab fa-youtube' style='font-size:55px; color:red'></i></a>
+            <a href=""><i class='fab fa-facebook' style='font-size:55px'></i></a>
+            <a href=""><i class='fab fa-google-play' style='font-size:55px; color:green'></i></a>
+        </div>
+
+
+        <div class="col-md-3">
+            <i class='fas fa-clock' style='font-size:36px; color:red;'></i><br>
+            <h4><b >We Are Open!</b><br></h4>
+            <b class="text-muted">Weekdays: 9 am- 5 pm</b><br>
+            <b class="text-muted">Weekends: 9am -12pm</b><br>
+            <b class="text-muted">We are closed on all public holidays</b>
+        </div>
+
+        <div class="col-md-3">
+            <i class="fas fa-phone" style='font-size:30px; color:green '></i><br>
+            <h4><b class="text-warning"> Customer Care Lines</b><br></h4>
+
+            <b>020 567 767</b><br>
+            <b>020 767 567</b><br>
+            <b>Email:</b><br>
+
+
+        </div>
+        <div class="col-md-3">
+            <b>We Accept</b><br>
+            <a href=""><i class="fab fa-paypal" style="font-size: 36px;"></i></a>
+            <a href=""><i class="fab fa-cc-visa" style="font-size: 36px;"></i></a>
+            <a href=""><img src="static/lipanampesa.jpeg" width="36px"></a>
+        </div>
+
+      </div>
+
+    </footer><br>
+
+	<footer class="footer" class="row" >
+            <div class="col-md-12 text-center text-white">
+              <b>Copyright &copy; 2021. All Rights Reserved</b>
+              <br>
+              <i>Developed by <a href="" class="text-black-50"><b>JeronoK Ltd</b></a></i>
+            </div>
+
+</footer>
+</section>
+
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+
+</body>
+</html>

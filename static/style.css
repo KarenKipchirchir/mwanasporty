@@ -1,0 +1,61 @@
+.footer{
+	background-color: grey;
+}
+.navbar{
+	padding-left: 2%;
+	padding-top: 2%;
+	padding-right: 2%;
+	margin: 2%;
+	color: #F57C00;
+}
+.body{
+
+	font-family: Hahmlet;
+
+}
+.dropbtn{
+	border: 0px;
+}
+.dropdownlinks{
+	list-style-type: none;
+}
+
+.dropdown:hover>.dropdown-menu{
+        display: block;
+}
+.dropdown>.dropdown-toggle:active{
+
+}
+.btn{
+    border:none;
+}
+.card-heading{
+	text-align: center;
+	background-color: black;
+	color: white;
+	padding: 1%;
+	margin: 1%;
+ }
+ .card-text{
+ 	font-size: 12px;
+ }
+.controls-top{
+ 	text-align: center;
+
+ }
+ .btn-floating{
+    height: 500px;
+    width: 50px;
+    /*color */
+    background: #1b1b1b ;
+    opacity: 0.5;
+    /*shape border*/
+    border: 0 ;
+    border-radius: 0%; /*zero for square */
+    /*symbol */
+    color: #fff;
+    line-height: 100px;
+ }
+ .gender{
+ 	text-align: center;
+ }
