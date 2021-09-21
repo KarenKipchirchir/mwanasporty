@@ -10,64 +10,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body class="body">
- <!-- Nav Bar -->
-<section>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light"  >
-              <img src="static/logo.png" width="200px" height="100px">
-              <a class="navbar-brand" href="/"></a>
-              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-
-                    <li class="nav-item active">
-                      <a class="nav-link" href="/"><b>Home</b></a>
-                    </li>
-
-                    <li class="nav-item dropdown">
-                      <a class="nav-link dropdown-toggle" href="/activewear" id="navbardrop"><b>Active Wear</b></a>
-                      <div class="dropdown-menu">
-                        <ul class="dropdownlinks">
-                            <li><a href="#men"> Men</a></li>
-                            <li><a href="#women">Women</a></li>
-
-                        </ul>
-                      </div>
-                    </li>
-
-
-
-                    <li class="nav-item">
-                      <a class="nav-link" href="/shoes"><b>Shoes</b></a>
-                    </li>
-
-                    <li>
-                      <a class="nav-link" href="/accessories"><b>Accessories</b></a>
-                    </li>
-
-                     <li>
-                      <a class="nav-link" href="/tournaments"><b>Tournaments</b></a>
-                    </li>
-
-                    <li>
-                        <div id="account" class="nav-item dropdown" >
-                            <a class="nav-link dropdown-toggle" href="/account" id="navbardrop1"><b>Account</b></a>
-                                <div class="dropdown-menu">
-                                    <ul class="dropdownlinks">
-                                        <li><a href="/signin">Sign In</a></li>
-                                        <li> <a href="/signup">Sign Up</a></li>
-                                    </ul>
-                                </div>
-                        </div>
-                    </li>
-                </ul>
-              </div>
-
-    </nav>
-
-</section>
+<!--navbar here-->
+{% include 'navbar.html' %}
+<!--  navbar was removed here-->
 <!-- General Section-->
  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
       <ol class="carousel-indicators">
@@ -465,60 +410,9 @@
 
 </div>
 
-
- <!-- Footer Section  -->
-<section>
-    <footer>
-        <div class="row text-center">
-
-          <div class="col-md-3">
-			      <h4><b>Our Social Media Handles:</b></h4>
-            <a href=""><i class='fab fa-twitter' style='font-size:55px'></i></a>
-            <a href=""><i class='fab fa-youtube' style='font-size:55px; color:red'></i></a>
-            <a href=""><i class='fab fa-facebook' style='font-size:55px'></i></a>
-            <a href=""><i class='fab fa-google-play' style='font-size:55px; color:green'></i></a>
-        </div>
-
-
-        <div class="col-md-3">
-            <i class='fas fa-clock' style='font-size:36px; color:red;'></i><br>
-            <h4><b >We Are Open!</b><br></h4>
-            <b class="text-muted">Weekdays: 9 am- 5 pm</b><br>
-            <b class="text-muted">Weekends: 9am -12pm</b><br>
-            <b class="text-muted">We are closed on all public holidays</b>
-        </div>
-
-        <div class="col-md-3">
-            <i class="fas fa-phone" style='font-size:30px; color:green '></i><br>
-            <h4><b class="text-warning"> Customer Care Lines</b><br></h4>
-
-            <b>020 567 767</b><br>
-            <b>020 767 567</b><br>
-            <b>Email:</b><br>
-
-
-        </div>
-        <div class="col-md-3">
-            <b>We Accept</b><br>
-            <a href=""><i class="fab fa-paypal" style="font-size: 36px;"></i></a>
-            <a href=""><i class="fab fa-cc-visa" style="font-size: 36px;"></i></a>
-            <a href=""><img src="static/lipanampesa.jpeg" width="36px"></a>
-        </div>
-
-      </div>
-
-    </footer><br>
-
-	<footer class="footer" class="row" >
-            <div class="col-md-12 text-center text-white">
-              <b>Copyright &copy; 2021. All Rights Reserved</b>
-              <br>
-              <i>Developed by <a href="" class="text-black-50"><b>JeronoK Ltd</b></a></i>
-            </div>
-
-</footer>
-</section>
-
+<!--footer here-->
+<!--footer was removed here-->
+{% include 'footer.html' %}
 
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
