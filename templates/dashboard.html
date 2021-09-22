@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+    <script src="https://kit.fontawesome.com/f8ca3d18f3.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link href="static/style.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Hahmlet:wght@100&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<body class="body">
+{% if session.admin %}
+    <h1 class="jumbotron">Admin Dashboard</h1>
+
+    <div class="container">
+            <b>{{session.admin}}</b>
+            <a href="/adminlogout">Log Out</a> <br>
+        <section class="row">
+                <!--  Bootsrap side bar    -->
+                <!-- Sidebar-->
+            <div   class="col-md-2 border-end bg-white" id="sidebar-wrapper">
+                <div class="sidebar-heading border-bottom bg-light">Sections</div>
+                <div class="list-group list-group-flush">
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Dashboard</a>
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Sales</a>
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Suppliers</a>
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Products</a>
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Reviews</a>
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Shipping Status</a>
+                </div>
+            </div>
+
+
+            <div class="col-md-10">
+                <!--   Display all customers in a table      -->
+                <h5>Customers</h5>
+                <table class="table">
+                    <tr>
+                        <th>ID</th>
+                        <th>Names</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <th>Gender</th>
+                        <th>Address</th>
+                        <th>Action</th>
+                    </tr>
+                          {% for row in rows %}
+                            <tr>
+                                 <td>{{row[0]}}</td>
+                                 <td>{{row[3]}}  {{row[1]}} {{row[2]}}</td>
+                                 <td>{{row[4]}}</td>
+                                 <td>{{row[5]}}</td>
+                                 <td>{{row[7]}}</td>
+                                 <td>{{row[8]}}</td>
+                                <td><a href="/customer_del/{{row[0]}}" onclick="return confirm('Are you sure?');">
+                                       <i class="fas fa-trash-alt"></i>
+                                </a></td>
+                            </tr>
+                           {% endfor %}
+                           {{msg}}
+                </table>
+
+            </div>
+        </section>
+    </div>
+
+{% else %}
+    Are you an admin? Log In<a href="/admin">Here</a>
+{% endif %}
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+</body>
+</html>
