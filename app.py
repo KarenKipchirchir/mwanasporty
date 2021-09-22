@@ -291,9 +291,35 @@ def admin():
 @app.route('/dashboard')
 def dashboard():
     if 'admin' in session:
-        return render_template('dashboard.html') #create this template
+        sql = "select * from customers ORDER by reg_date DESC"
+        cursor = connection.cursor()
+        cursor.execute(sql)
+        if cursor.rowcount == 0:
+            return render_template('dashboard.html', msg= "No customers")
+        else:
+            rows = cursor.fetchall()
+            return render_template('dashboard.html', rows=rows)  # create this template
     else:
         return redirect('/admin')
+
+@app.route('/adminlogout')
+def adminlogout():
+    session.pop('admin')  # clear session
+    return redirect('/admin')
+
+@app.route('/customer_del/<customer_id>')
+def customer_del(customer_id):
+    if 'admin' in session:
+        sql = 'delete from customers where customer_id=%s'
+        cursor = connection.cursor()
+        cursor.execute(sql, customer_id)
+        connection.commit()
+        flash("Delete Successful")
+        return render_template('/dashboard')
+    else:
+        return redirect('/admin')
+
+
 # check
 if __name__ == '__main__':
     app.run(debug=True)
