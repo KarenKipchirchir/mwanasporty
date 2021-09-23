@@ -62,3 +62,23 @@
  .single{
     font-family: Hahmlet;
  }
+ .p-3 {
+  padding: 1%;
+}
+#single{
+    font-family:Hahmlet;
+
+}
+
+.img-fluid{
+    float: center;
+    width:  300px;
+    height: 300px;
+
+}
+.img-fluid1{
+    float: center;
+    width:  300px;
+    height: 300px;
+
+}
