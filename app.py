@@ -27,7 +27,7 @@ def home():
 @app.route('/activewear')
 def activewear():
     # create your query
-    sql = "SELECT * FROM products_tbl"
+    sql = "SELECT * FROM products_tbl where product_category='Activewear' "
     # execute/run
     # create a cursor used to execute sql
     cursor = connection.cursor()
@@ -43,7 +43,7 @@ def activewear():
 @app.route('/shoes')
 def shoes():
     # create your query
-    sql = "SELECT * FROM products_tbl"
+    sql = "SELECT * FROM products_tbl where product_category='Shoes' "
     # execute/run
     # create a cursor used to execute sql
     cursor = connection.cursor()
@@ -67,7 +67,7 @@ def single(product_id):
     cursor = connection.cursor()
     # Now use the cursor to execute your sql
     # below you provide id to replace the %s
-    cursor.execute(sql, (product_id))
+    cursor.execute(sql,(product_id))
 
     # check how many rows were returned
     if cursor.rowcount == 0:
@@ -206,7 +206,7 @@ def mpesa_payment():
         qtty = str(request.form['qtty'])
         product_id = str(request.form['product_id'])
         # multiply qtty * amount
-        total_pay = float(qtty) * float(amount)
+        total_pay = int(qtty) * int(amount)
 
         # sql to insert data
         # create a table,payment_info
@@ -310,16 +310,46 @@ def adminlogout():
 @app.route('/customer_del/<customer_id>')
 def customer_del(customer_id):
     if 'admin' in session:
-        sql = 'delete from customers where customer_id=%s'
+        sql = 'delete from customers where customer_id = %s'
         cursor = connection.cursor()
-        cursor.execute(sql, customer_id)
+        cursor.execute(sql, (customer_id))
         connection.commit()
         flash("Delete Successful")
-        return render_template('/dashboard')
+        return redirect('/dashboard')
     else:
         return redirect('/admin')
 
+@app.route('/men')
+def men():
+    # create your query
+    sql = "SELECT * FROM products_tbl where target='Men' "
+    # execute/run
+    # create a cursor used to execute sql
+    cursor = connection.cursor()
+    # now use the cursor to execute your sql.
+    cursor.execute(sql)
+    # check how many rows were returned
+    if cursor.rowcount == 0:
+        return render_template("activewear.html", msg="Please use different filter word ")
+    else:
+        rows = cursor.fetchall()
+        return render_template("activewear.html", rows=rows)
 
+@app.route('/women')
+def women():
+    # create your query
+    sql = "SELECT * FROM products_tbl where target='Women' "
+    # execute/run
+    # create a cursor used to execute sql
+    cursor = connection.cursor()
+    # now use the cursor to execute your sql.
+    cursor.execute(sql)
+    # check how many rows were returned
+    if cursor.rowcount == 0:
+        return render_template("activewear.html", msg="Please use different filter word ")
+    else:
+        rows = cursor.fetchall()
+        return render_template("activewear.html", rows=rows)
 # check
 if __name__ == '__main__':
     app.run(debug=True)
