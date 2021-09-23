@@ -40,375 +40,42 @@
 </div>
  <br><br>
 
- <section class="container">
-     <div class="row">
-         <div class="card col-md-3">
-              <div class="card-body">
-                <p class="card-heading">Track Jacket</p>
-              </div>
-              <img src="static/trackjacket.jpg" alt="Card image" style="width: 250px; height: 300px;"><br>
-              <div class="card-body1">
-                <p class="card-text">This jacket  is the perfect midground between accessibility and luxury</p>
-              </div>
+<div class="container">
+    {% if session.user %}
+        Welcome:
+        {{session.user}} <a href="/logout">Logout</a>
 
-             <button class="btn btn-info">Add To Cart</button>
-             <br>
+    {% else %}
+       Not Logged in <a href="/login">Login here</a>
 
-         </div>
-         <div class="card col-md-3">
-              <div class="card-body">
-                <p class="card-heading">Hoodie</p>
-              </div>
-              <img src="static/hoodie.jpg" alt="Card image" style="width: 250px; height: 300px;"><br>
-              <div class="card-body1">
-                <p class="card-text">This hoodie gives you the full coverage for a full workout.</p>
-              </div>
+    {% endif %}
+    .
 
-             <button class="btn btn-info">Add To Cart</button>
-             <br>
+       <h3>ACTIVE WEAR</h3>
+        <section class="row">
+            {% for row in rows %}
+               <div  class="item col-md-4">
+                   <div class="card">
+                       <div class="card-body text-center">
+                           <img src="../static/{{row[10]}}"  class="img-fluid"  height="80%">
+                           <br>
+                           <h6>{{row[2]}}</h6>
+                           <p class="text-muted">{{row[3]}}</p>
+                           <b>
+                              <strike class="text-muted">KES {{row[5]}}</strike>
+                              <b class="text-info">KES {{row[6]}}</b>
+                           </b>
+                          <br>
+<!--   below we access /single route providing the current product_id-->
+                          <a href="/single/{{row[0]}}" class="btn btn-info">Read More</a>
+                       </div>
+                   </div>
+                   <br><br>
+               </div>
+            {% endfor %}
+        </section>
+   </div>
 
-         </div>
-         <div class="card col-md-3">
-              <div class="card-body">
-                <p class="card-heading">Visor</p>
-              </div>
-              <img src="static/cap.jpg" alt="Card image" style="width: 250px; height: 300px;"><br>
-              <div class="card-body1">
-                <p class="card-text">This visor is made of fabric sweatband  that folds down for easy embellishment.</p>
-              </div>
-
-             <button class="btn btn-info">Add To Cart</button>
-             <br>
-
-         </div>
-         <div class="card col-md-3">
-              <div class="card-body">
-                <p class="card-heading">Running Socks</p>
-              </div>
-              <img src="static/sock.jpg" alt="Card image" style="width: 250px; height: 300px;"><br>
-              <div class="card-body1">
-                <p class="card-text">An ultra-lightweight sock with cushion underfoot offers a comfortable, airy fit with zero bulk.</p>
-              </div>
-
-             <button class="btn btn-info">Add To Cart</button>
-             <br>
-
-         </div>
-     </div>
-
- </section><br><br>
-
-
-
-<!-- Womens Section-->
- <h3 class="gender" id="women">Women's Section</h3>
- <img src="static/womentemplate.jpg" alt="" class="d-block w-100 img-fluid" style="width: 700px; height: 300px;">
-<!--Carousel Wrapper-->
-<div id="multi-item-example" class="carousel slide carousel-multi-item" data-ride="carousel">
-
-  <!--Controls-->
-  <div class="controls-top">
-    <a class="btn-floating" href="#multi-item-example" data-slide="prev"><i class="fas fa-chevron-left"></i></a>
-    <a class="btn-floating" href="#multi-item-example" data-slide="next"><i
-        class="fas fa-chevron-right"></i></a>
-  </div>
-  <!--/.Controls-->
-
-  <!--Indicators-->
-  <ol class="carousel-indicators" >
-    <li data-target="#multi-item-example" data-slide-to="0" class="active"></li>
-    <li data-target="#multi-item-example" data-slide-to="1"></li>
-
-  </ol>
-  <!--/.Indicators-->
-
-  <!--Slides-->
-  <div class="carousel-inner" role="listbox">
-
-    <!--First slide-->
-    <div class="carousel-item active">
-
-      <div class="col-md-3" style="float:left">
-       <div class="card mb-2">
-        <p class="card-heading">Tank Top</p>
-          <img class="card-img-top"
-            src="static/womentanktop.jpg" alt="Card image cap" style="width: 250px; height: 300px;">
-          <div class="card-body">
-            
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-              card's content.</p>
-            <a class="btn btn-primary">Add To Cart</a><br>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-3" style="float:left">
-        <div class="card mb-2">
-          <p class="card-heading">Long Sleeved Shirt</p>
-          <img class="card-img-top"
-            src="static/longsleevedshirt.jpg" alt="Card image cap" style="width: 250px; height: 300px;">
-          <div class="card-body">
-            
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-              card's content.</p>
-            <a class="btn btn-primary">Add To Cart</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-3" style="float:left">
-        <div class="card mb-2">
-          <p class="card-heading">Sweat Shorts</p>
-          <img class="card-img-top"
-            src="static/sweatshorts.jpg" alt="Card image cap" style="width: 250px; height: 300px;">
-          <div class="card-body">
-            
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-              card's content.</p>
-            <a class="btn btn-primary">Add To Cart</a>
-          </div>
-        </div>
-      </div>
-
-       <div class="col-md-3" style="float:left">
-       <div class="card mb-2">
-        <p class="card-heading">Sweat Pants</p>
-          <img class="card-img-top"
-            src="static/sweatpants.jpg" alt="Card image cap" style="width: 250px; height: 300px;">
-          <div class="card-body">            
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-              card's content.</p>
-            <a class="btn btn-primary">Add To Cart</a>
-          </div>
-        </div>
-      </div>
-
-    </div>
-    <!--/.First slide-->
-
-    <!--Second slide-->
-    <div class="carousel-item">
-
-      <div class="col-md-3" style="float:left">
-        <div class="card mb-2">
-          <p class="card-heading">Racker Back</p>
-          <img class="card-img-top img-fluid"
-            src="static/rackerback.jpg" alt="Card image cap" style="width: 250px; height: 300px;">
-          <div class="card-body">
-            
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-              card's content.</p>
-            <a class="btn btn-primary">Add To Cart</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-3" style="float:left">
-        <div class="card mb-2">
-          <p class="card-heading">Sports Bra</p>
-          <img class="card-img-top"
-            src="static/sportsbras.jpg" style="width: 250px; height: 300px;">
-          <div class="card-body">
-            
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-              card's content.</p>
-            <a class="btn btn-primary">Add To Cart</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-3" style="float:left">
-        <div class="card mb-2">
-          <p class="card-heading">Leggings</p>
-          <img class="card-img-top"
-            src="static/leggings.jpg" style="width: 250px; height: 300px;">
-          <div class="card-body">
-            
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-              card's content.</p>
-            <a class="btn btn-primary">Add To Cart</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-3" style="float:left">
-        <div class="card mb-2">
-          <p class="card-heading">Bermuda Shorts</p>
-          <img class="card-img-top"
-            src="static/bermudashorts.jpg" alt="Card image cap" style="width: 250px; height: 300px;">
-          <div class="card-body">
-            
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-              card's content.</p>
-            <a class="btn btn-primary">Add To Cart</a>
-          </div>
-        </div>
-      </div>
-
-    </div>
-    <!--/.Second slide-->
-
-
-
-  </div>
-  <!--/.Slides-->
-
-</div>
-
-<!-- Mens Section-->
-  <h3 class="gender" id="men">Men's Section</h3>
- <img src="static/mentemplate.jpg" alt="" class="d-block w-100 img-fluid" style="width: 700px; height: 300px;">
- <!--Carousel Wrapper-->
-<div id="multi-item-example" class="carousel slide carousel-multi-item" data-ride="carousel">
-
-  <!--Controls-->
-  <div class="controls-top">
-    <a class="btn-floating" href="#multi-item-example" data-slide="prev"><i class="fas fa-chevron-left"></i></a>
-    <a class="btn-floating" href="#multi-item-example" data-slide="next"><i
-        class="fas fa-chevron-right"></i></a>
-  </div>
-  <!--/.Controls-->
-
-  <!--Indicators-->
-  <ol class="carousel-indicators" >
-    <li data-target="#multi-item-example" data-slide-to="0" class="active"></li>
-    <li data-target="#multi-item-example" data-slide-to="1"></li>
-
-  </ol>
-  <!--/.Indicators-->
-
-  <!--Slides-->
-  <div class="carousel-inner" role="listbox">
-
-    <!--First slide-->
-    <div class="carousel-item active">
-
-      <div class="col-md-3" style="float:left">
-       <div class="card mb-2">
-        <p class="card-heading">Compression T-shirt</p>
-          <img class="card-img-top"
-            src="static/compressiontshirt.jpg" alt="Card image cap" style="width: 250px; height: 300px;">
-          <div class="card-body">
-
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-              card's content.</p>
-            <a class="btn btn-primary">Add To Cart</a><br>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-3" style="float:left">
-        <div class="card mb-2">
-          <p class="card-heading">Tank Top</p>
-          <img class="card-img-top"
-            src="static/tanktop.jpg" alt="Card image cap" style="width: 250px; height: 300px;">
-          <div class="card-body">
-
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-              card's content.</p>
-            <a class="btn btn-primary">Add To Cart</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-3" style="float:left">
-        <div class="card mb-2">
-          <p class="card-heading">Tight</p>
-          <img class="card-img-top"
-            src="static/tights.jpg" alt="Card image cap" style="width: 250px; height: 300px;">
-          <div class="card-body">
-
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-              card's content.</p>
-            <a class="btn btn-primary">Add To Cart</a>
-          </div>
-        </div>
-      </div>
-
-       <div class="col-md-3" style="float:left">
-       <div class="card mb-2">
-        <p class="card-heading">Compression Short</p>
-          <img class="card-img-top"
-            src="static/compressionshort.jpg" alt="Card image cap" style="width: 250px; height: 300px;">
-          <div class="card-body">
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-              card's content.</p>
-            <a class="btn btn-primary">Add To Cart</a>
-          </div>
-        </div>
-      </div>
-
-    </div>
-    <!--/.First slide-->
-
-    <!--Second slide-->
-    <div class="carousel-item">
-
-      <div class="col-md-3" style="float:left">
-        <div class="card mb-2">
-          <p class="card-heading">Trainer Short</p>
-          <img class="card-img-top img-fluid"
-            src="static/trainershorts.jpg" alt="Card image cap" style="width: 250px; height: 300px;">
-          <div class="card-body">
-
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-              card's content.</p>
-            <a class="btn btn-primary">Add To Cart</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-3" style="float:left">
-        <div class="card mb-2">
-          <p class="card-heading">Capri Pant</p>
-          <img class="card-img-top"
-            src="static/capripants.jpg" style="width: 250px; height: 300px;">
-          <div class="card-body">
-
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-              card's content.</p>
-            <a class="btn btn-primary">Add To Cart</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-3" style="float:left">
-        <div class="card mb-2">
-          <p class="card-heading">Singlet</p>
-          <img class="card-img-top"
-            src="static/singlet.jpg" style="width: 250px; height: 300px;">
-          <div class="card-body">
-
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-              card's content.</p>
-            <a class="btn btn-primary">Add To Cart</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-3" style="float:left">
-        <div class="card mb-2">
-          <p class="card-heading">Short Sleeve Shirt</p>
-          <img class="card-img-top"
-            src="static/shortsleeve.jpg" alt="Card image cap" style="width: 250px; height: 300px;">
-          <div class="card-body">
-
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-              card's content.</p>
-            <a class="btn btn-primary">Add To Cart</a>
-          </div>
-        </div>
-      </div>
-
-    </div>
-    <!--/.Second slide-->
-
-
-
-  </div>
-  <!--/.Slides-->
-
-</div>
 
 <!--footer here-->
 <!--footer was removed here-->
